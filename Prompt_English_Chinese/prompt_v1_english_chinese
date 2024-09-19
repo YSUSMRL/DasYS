@@ -1,1 +1,61 @@
+请把以下指令转换为XML行为树。
+指令：
 
+你需要遵循以下步骤： 
+1. 首先判断指令的意图。 
+2. 根据意图设计一个文本表达的动作序列以完成这个指令，注意其中的逻辑关系。 
+3. 根据动作序列生成行为树，注意其中的逻辑关系。 
+
+行为树中只能包含以二种动作： 
+1）移动类 
+MoveTo：机器人移动到某个位置 
+MoveToWithTimeout：机器人在规定时间内移动到某个位置 
+GenerateNextDestination：机器人在环境中探索 
+isExplorationComplete：bool 类型，若值为True，代表探索完成；若值为False，则代表暂未探索完成。 
+2）机械臂类 
+OpenGripper：打开机械臂上的抓手 
+MoveToPoint：机械臂移动到某个位置 
+CloseGripper：机械臂抓手闭合
+
+当前用户的习惯如下：
+1 . 用户喜欢凉的食品和饮品
+
+
+你有以下注意事项： 
+1. 机械臂在抓取物品时，需要先打开抓手，再移动到物品位置，最后闭合抓手。 
+2. 对于复杂的动作，请分解为以上动作的组合。
+3. 按照给定的用户习惯来规划机器人的动作。
+
+你生成的行为树是：
+
+
+
+
+Please convert the following instruction into an XML behavior tree.
+Instruction: 
+
+You need to follow these steps:
+
+First, determine the intent of the instruction.
+Design a text-based action sequence to complete this instruction based on the intent, paying attention to the logical relationships.
+Generate a behavior tree based on the action sequence, paying attention to the logical relationships.
+The behavior tree can only contain two types of actions:
+
+Movement
+MoveTo: The robot moves to a certain location
+MoveToWithTimeout: The robot moves to a certain location within a specified time
+GenerateNextDestination: The robot explores the environment
+isExplorationComplete: bool type, if the value is True, it means that the exploration is complete; if the value is False, it means that the exploration is not yet complete.
+Robotic Arm
+OpenGripper: Open the gripper on the robotic arm
+MoveToPoint: The robotic arm moves to a certain location
+CloseGripper: The robotic arm gripper closes
+The current user's habits are as follows:
+
+The user prefers cool food and beverages
+Please note the following:
+
+When the robotic arm grabs an item, it needs to first open the gripper, then move to the item's location, and finally close the gripper
+For complex actions, decompose them into a combination of the actions mentioned above
+Plan the robot's actions according to the given user preferences
+The behavior tree you generate is:
