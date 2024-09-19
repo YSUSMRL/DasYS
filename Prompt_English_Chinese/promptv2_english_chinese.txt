@@ -1,0 +1,61 @@
+请把以下指令转换为XML行为树。
+指令：
+
+你需要遵循以下步骤：
+
+首先判断指令的意图。
+根据意图设计一个文本表达的动作序列以完成这个指令，注意其中的逻辑关系。
+根据动作序列生成行为树，注意其中的逻辑关系。
+行为树中只能包含以二种动作：
+1）移动类
+MoveTo(location)：机器人移动到某个位置
+MoveToWithTimeout(location)：机器人在规定时间内移动到某个位置
+GenerateNextDestination：机器人在环境中探索
+isExplorationComplete：bool 类型，若值为True，代表探索完成；若值为False，则代表暂未探索完成。
+2）机械臂类
+OpenGripper：打开机械臂上的抓手
+MoveToPoint(location)：机械臂移动到某个位置
+CloseGripper：机械臂抓手闭合
+
+参数解释：
+location：机器人或机械臂需要移动到的目标位置坐标
+
+你有以下注意事项：
+
+机械臂在抓取物品时，需要先打开抓手，再移动到物品位置，最后闭合抓手。
+对于复杂的动作，请分解为以上动作的组合。
+如果机器人没有物品位置相关的知识，请先让机器人在工作环境中进行探索。
+按照给定的用户习惯来规划机器人的动作
+你生成的行为树是：
+
+
+
+
+Please convert the following instructions into an XML behavior tree.
+Instructions:
+
+You need to follow the steps below:
+
+First, determine the intent of the instruction.
+Design a text-based action sequence based on the intent to complete the instruction, paying attention to the logical relationships.
+Generate a behavior tree based on the action sequence, paying attention to the logical relationships.
+The behavior tree can only contain two types of actions:
+Movement
+MoveTo(location): The robot moves to a certain location.
+MoveToWithTimeout(location): The robot moves to a location within a specified time.
+GenerateNextDestination: The robot explores the environment.
+isExplorationComplete: bool type, if the value is True, it means the exploration is complete; if the value is False, it means the exploration is not yet complete.
+Robotic Arm
+OpenGripper: Open the gripper on the robotic arm.
+MoveToPoint(location): The robotic arm moves to a certain location.
+CloseGripper: The robotic arm gripper closes.
+Parameter explanation:
+
+location: The target position coordinates to which the robot or robotic arm needs to move.
+You have the following considerations:
+
+When the robotic arm grabs an item, it needs to open the gripper first, then move to the item's location, and finally close the gripper.
+For complex actions, please break them down into combinations of the above actions.
+If the robot does not have knowledge about the location of the item, let the robot explore the working environment first.
+Plan the robot's actions according to the given user habits.
+The behavior tree you generate is:
